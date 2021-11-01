@@ -17,18 +17,11 @@ MicroModal.init()
 
 document.addEventListener('DOMContentLoaded', () => {
 	MicroModal.init({
-		onShow: (modal) => console.info(`${modal.id} is shown`),
-		onClose: (modal) => console.info(`${modal.id} is hidden`),
 		openTrigger: 'data-micromodal-open',
 		closeTrigger: 'data-micromodal-close',
 		awaitOpenAnimation: true,
-		// awaitCloseAnimation: true,
+		awaitCloseAnimation: true,
 		disableFocus: true,
-		// onClose: function (modal, element, event) {
-		// 	event.preventDefault()
-		// 	event.stopPropagation()
-		// 	document.body.classList.remove('overflow')
-		// }
 	})
 
 	/** LazyLoad Images */
@@ -85,11 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
-		},
-
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
 		},
 	})
 
