@@ -1,0 +1,86 @@
+.work
+	margin-top: 120px
+	margin-bottom: 100px
+	@include media-breakpoint-down(lg)
+		margin-bottom: 0
+		margin-top: 0
+	&__image
+		width: 600px
+		height: 600px
+		margin: 0 auto
+		position: relative
+		@include media-breakpoint-down(lg)
+			width: 100%
+			height: auto
+			img
+				display: none
+	&__stage
+		position: absolute
+		padding: 23px 42px
+		box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25)
+		border-radius: 35px
+		background-color: #fff
+		font-size: 16px
+		font-weight: 500
+		@include media-breakpoint-down(lg)
+			position: static
+			box-shadow: none
+			padding: 0
+			margin-bottom: 38px
+			padding-left: 30px
+			&:last-child
+				margin-bottom: 0
+			&::before
+				position: absolute
+				content: ''
+				left: 0
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				background-color: #809fe4
+			&:nth-child(even)
+				&::before
+					background-color: #ffdb00
+		&.one
+			top: -58px
+			left: -180px
+		&.two
+			top: -86px
+			right: -177px
+		&.three
+			top: 66px
+			right: -177px
+		&.four
+			top: 288px
+			right: -177px
+		&.five
+			top: 505px
+			right: -177px
+		&.six
+			bottom: 18px
+			left: -220px
+		&.seven
+			bottom: 347px
+			left: -209px
+	&__decor
+		position: absolute
+		@include media-breakpoint-down(lg)
+			display: none
+		&.top
+			top: -109px
+			left: 121px
+		&.left
+			top: 281px
+			left: -94px
+		&.bottom
+			bottom: -90px
+			left: 40px
+		&.right-top
+			top: -10px
+			right: -25px
+		&.right
+			top: 145px
+			right: -96px
+		&.right-bottom
+			top: 380px
+			right: -86px

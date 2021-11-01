@@ -1,0 +1,59 @@
+.application
+	height: 430px
+	background-image: url(../images/bg.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	position: relative
+	z-index: 1
+	padding: 105px 0
+	@include media-breakpoint-down(lg)
+		background-image: none
+		background-color: #89a3de
+		height: auto
+		padding: 60px 15px
+	&__title
+		font-size: 30px
+		text-align: center
+		font-weight: 700
+		color: #fff
+		margin-bottom: 27px
+		@include media-breakpoint-down(lg)
+			margin-bottom: 16px
+	&__desc
+		color: #fff
+		text-align: center
+		margin-bottom: 55px
+		@include media-breakpoint-down(lg)
+			margin-bottom: 38px
+	&__form
+		display: flex
+		align-items: center
+		justify-content: center
+		@include media-breakpoint-down(lg)
+			flex-direction: column
+	&__input
+		height: 72px
+		padding: 0 30px
+		color: rgba(0, 0, 0, 0.5)
+		border-radius: 50px
+		border: none
+		max-width: 370px
+		width: 100%
+		margin-right: 30px
+		@include media-breakpoint-down(lg)
+			margin-right: 0
+			margin-bottom: 16px
+		&:last-child
+			margin-right: 0
+	&__button
+		background-color: #ffdb00
+		font-weight: 700
+		font-size: 18px
+		height: 72px
+		max-width: 370px
+		width: 100%
+		border-radius: 50px
+		border: none
+		text-transform: uppercase
+		box-shadow: 0px 0px 10px #FFDB00

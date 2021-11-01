@@ -1,0 +1,28 @@
+.advantages
+	display: flex
+	@include media-breakpoint-down(xl)
+		margin-bottom: 45px
+		align-items: center
+	@include media-breakpoint-down(sm)
+		padding: 0 50px
+	&__images
+		display: flex
+		justify-content: center
+		position: relative
+		margin-right: 28px
+		width: 45px
+		min-width: 45px
+		height: 45px
+	&__title
+	&__decor
+		position: absolute
+		bottom: -51px
+		width: 16px
+		height: 16px
+		border-radius: 50%
+		@include media-breakpoint-down(xl)
+			display: none
+		&.blue
+			background-color: #96B2F1
+		&.yellow
+			background-color: #ffdb00

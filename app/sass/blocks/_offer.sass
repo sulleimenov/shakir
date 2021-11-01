@@ -1,0 +1,243 @@
+.offer
+	padding-top: 222px
+	height: 1200px
+	width: 100%
+	@include media-breakpoint-down(xxl)
+		padding-top: 180px
+	@include media-breakpoint-down(lg)
+		padding-top: 40px
+		height: 100%
+	@include media-breakpoint-down(md)
+		height: 89%
+
+.swiper
+	width: 100%
+	height: 100%
+
+.swiper-slide
+	@include media-breakpoint-down(lg)
+		overflow: hidden
+
+.offer-slider
+	position: relative
+	z-index: 3
+	&__item
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@include media-breakpoint-down(xxl)
+			width: 80%
+			margin: 0 auto
+		@include media-breakpoint-down(xl)
+			width: 100%
+		@include media-breakpoint-down(lg)
+			flex-wrap: wrap
+	&__info
+		position: relative
+		padding: 65px 0
+		padding-right: 80px
+		width: 46%
+		@include media-breakpoint-down(xxl)
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			padding: 40px 0
+		@include media-breakpoint-down(lg)
+			width: 100%
+			padding: 40px 0
+		@include media-breakpoint-down(md)
+			padding-right: 40px
+			padding-left: 100px
+		@include media-breakpoint-down(sm)
+			padding-left: 50px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: -214px
+			width: 230%
+			height: 100%
+			border-radius: 300px
+			background-color: rgba(255, 255, 255, 0.5)
+			z-index: -1
+			@include media-breakpoint-down(xxl)
+				width: 230%
+				left: -150px
+			@include media-breakpoint-down(xl)
+				left: -290px
+			@include media-breakpoint-down(lg)
+				left: -140px
+				width: 115%
+				border-top-left-radius: 0
+				border-bottom-left-radius: 0
+			@include media-breakpoint-down(md)
+				width: 130%
+			@include media-breakpoint-down(sm)
+				width: 135%
+	&__button
+		@include media-breakpoint-down(lg)
+			display: none
+	&__mobile
+		margin: 25px auto 80px
+		@include media-breakpoint-up(lg)
+			display: none
+	&__images
+		position: absolute
+		top: -60px
+		right: -50px
+		width: 50%
+		@include media-breakpoint-down(xxl)
+			right: 0
+			top: -90px
+		@include media-breakpoint-down(xl)
+			right: 40px
+		@include media-breakpoint-down(lg)
+			width: 100%
+			position: static
+			margin: 0 auto
+			margin-bottom: 130px
+	&__image
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 688px
+		height: 688px
+		border-radius: 50%
+		background-color: $yellow
+		@include media-breakpoint-down(xxl)
+			width: 500px
+			height: 500px
+		@include media-breakpoint-down(lg)
+			margin: 0 auto
+		@include media-breakpoint-down(md)
+			width: 300px
+			height: 300px
+		&::before
+			content: ''
+			position: absolute
+			left: -42px
+			bottom: -37px
+			width: 820px
+			height: 820px
+			border-radius: 50%
+			border: 2px solid rgba(255, 255, 255, 0.3)
+			@include media-breakpoint-down(xxl)
+				width: 600px
+				height: 600px
+			@include media-breakpoint-down(xl)
+				display: none
+			@include media-breakpoint-down(lg)
+				display: block
+				width: 580px
+				height: 580px
+			@include media-breakpoint-down(md)
+				width: 350px
+				height: 350px
+				left: -26px
+				bottom: -26px
+		img
+			max-width: 622px
+			@include media-breakpoint-down(xxl)
+				max-width: 400px
+			@include media-breakpoint-down(md)
+				max-width: 240px
+	&__title
+		font-weight: 700
+		font-size: 62px
+		// line-height: 71px
+		margin-bottom: 11px
+		z-index: 3
+		@include media-breakpoint-down(xxl)
+			font-size: 38px
+			// line-height: normal
+		@include media-breakpoint-down(lg)
+			font-size: 32px
+	&__subtitle
+		z-index: 3
+		font-size: 20px
+		// line-height: 38px
+		margin-bottom: 25px
+		@include media-breakpoint-down(xxl)
+			font-size: 18px
+			// line-height: normal
+		@include media-breakpoint-down(lg)
+			font-size: 15px
+			margin-bottom: 0
+	&__next
+		position: absolute
+		cursor: pointer
+		width: 74px
+		top: 600px!important
+		left: 17%!important
+		height: 74px
+		border-radius: 50%
+		background-color: rgba(255, 255, 255, 0.5)
+		@include media-breakpoint-down(xxl)
+			top: 400px!important
+			left: 16%!important
+		@include media-breakpoint-down(xl)
+			left: 14%!important
+		@include media-breakpoint-down(lg)
+			display: none
+
+.swiper-pagination-bullet
+	width: 18px
+	height: 18px
+	border-radius: 50%
+	background-color: rgba(255, 255, 255, 0.6)
+	opacity: 1
+	@include media-breakpoint-down(lg)
+		width: 13px
+		height: 13px
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet
+	margin: 25px 0
+
+.swiper-container-vertical>.swiper-pagination-bullets
+	top: 225px
+	right: 80px
+	@include media-breakpoint-down(xxl)
+		top: 150px
+		right: 80px
+
+.swiper-pagination
+	display: flex
+	align-items: center
+	flex-direction: column
+	@include media-breakpoint-down(lg)
+		flex-direction: row
+		justify-content: center
+
+.swiper-pagination-bullet-active
+	background-color: #fff
+	position: relative
+	width: 29px
+	height: 29px
+	&::after
+		content: ''
+		top: -12px
+		left: -12px
+		width: 53px
+		height: 53px
+		border-radius: 50%
+		position: absolute
+		border: 1px solid rgba(255, 255, 255, 0.5)
+	
+.swiper-button-next, .swiper-button-prev
+	top: 670px
+	left: 0
+	@include media-breakpoint-down(xxl)
+		top: 470px
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after
+	display: none
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+	@include media-breakpoint-down(lg)
+		bottom: 25px
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+	@include media-breakpoint-down(lg)
+		margin: 0 14px

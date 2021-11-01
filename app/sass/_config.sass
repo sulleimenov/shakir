@@ -1,0 +1,115 @@
+//variables
+$accent: #96b2f1
+$fontsize: 15px
+$textcolor: #302F5E
+$lineheight: 1.3
+$userfont: 'Ubuntu', sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+//colors
+$yellow: #ffe233
+$bg: #EEEDEC
+
+//bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 16px
+// $gutter: $grid-gutter-width
+$grid-columns: 12 !default
+
+//import
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+// @import 'node_modules/select2/src/scss/core.scss'
+@import 'node_modules/swiper/swiper-bundle'
+@import 'app/vendor/micromodal/micromodal'
+
+//fonts
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Ubuntu', normal, 400, '../fonts/Ubuntu-Regular.ttf')
+@include font('Ubuntu', italic, 400, '../fonts/Ubuntu-Italic.ttf')
+@include font('Ubuntu', normal, 500, '../fonts/Ubuntu-Medium.ttf')
+@include font('Ubuntu', italic, 500, '../fonts/Ubuntu-MediumItalic.ttf')
+@include font('Ubuntu', normal, 700, '../fonts/Ubuntu-Bold.ttf')
+@include font('Ubuntu', italic, 700, '../fonts/Ubuntu-BoldItalic.ttf')
+
+//general styles
+::placeholder
+	color: $accent
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	display: block
+	border-radius: 0
+	&:focus:required:invalid
+		border-color: #eb5757
+	&:required:valid
+		border-color: green
+
+textarea
+	color: $textcolor
+	width: 100%
+	padding: 10px 16px
+	background-color: $bg
+	border: none
+	&::placeholder
+		color: $textcolor
+
+label
+	margin-bottom: 0
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	font-weight: 300
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	text-transform: uppercase
+
+a
+	color: $textcolor
+	text-decoration: none
+	position: relative
+	// &::after
+	// 	content: ''
+	// 	position: absolute
+	// 	right: 0
+	// 	bottom: -1px
+	// 	background-color: $textcolor
+	// 	height: 1px
+	// 	display: block
+	// 	width: 0%
+	// 	transition: width .2s ease-in-out
+	// &:hover::after
+	// 	width: 100%
+	// 	right: auto
+	// 	left: 0
+	&:hover
+		text-decoration: none
+		color: $textcolor
+
+ul
+	padding-left: 20px
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 400
+
+h2
+	font-size: 22px
+
+img
+	max-width: 100%
+	display: block

@@ -1,0 +1,111 @@
+.header
+	overflow: hidden
+	position: relative
+	padding-top: 52px
+	height: 1148px
+	background-size: cover
+	background-repeat: no-repeat
+	@include media-breakpoint-down(xxl)
+		height: 930px
+	@include media-breakpoint-down(lg)
+		height: auto
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(137, 163, 222, 0.85)
+
+.header-top
+	position: relative
+	z-index: 10
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__nav
+		display: flex
+		align-items: center
+	&__info
+		@include media-breakpoint-down(lg)
+			display: flex
+			align-items: center
+
+.logo
+	margin-right: 67px
+
+.phone
+	font-weight: 700
+	font-size: 20px
+	@include media-breakpoint-down(lg)
+		padding-left: 35px
+		background: url(../images/icons/phone.png) left center no-repeat
+
+.menu
+	font-weight: 700
+	@include media-breakpoint-down(lg)
+		display: none
+	&__item
+		margin-right: 20px
+		&:last-child
+			margin-right: 0
+
+.menu-burger
+	display: flex
+	align-content: space-between
+	flex-wrap: wrap
+	width: 18px
+	height: 14.5px
+	margin-left: 18px
+	cursor: pointer
+	@include media-breakpoint-up(lg)
+		display: none
+	span
+		display: block
+		width: 100%
+		height: 2.5px
+		background-color: $textcolor
+
+.menu-mobile-wrapper
+	position: fixed
+	z-index: -1
+	opacity: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#302F5E, .85)
+	transition: opacity 0.3s
+	&.is-open
+		z-index: 11
+		opacity: 1
+
+.menu-mobile
+	position: absolute
+	right: 0
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	background-color: #fff
+	width: 90%
+	height: 100vh
+	padding: 30px 50px
+	transform: translateX(100%)
+	transition: all 0.3s
+	&.is-open
+		transform: translateX(0)
+	&__logo
+		display: block
+		margin-bottom: 45px!important
+	&__nav
+		display: flex
+		flex-direction: column
+		a
+			display: block
+			font-size: 18px
+			font-weight: 700
+			margin-bottom: 10px
+	&__call
+	&__close
+		position: absolute
+		top: 43px
+		right: 15px
