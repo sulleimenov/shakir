@@ -29,13 +29,13 @@
 				</svg>
 			</div>
 			<div class="menu-mobile__nav">
-				<a href="/" class="menu-mobile__logo"><img src="images/logo.png" alt="Sh"></a>
-				<a href="#">Главная</a>
-				<a href="#">Услуги</a>
-				<a href="#">Этапы работы</a>
-				<a href="#">Отзывы</a>
-				<a href="#">Портфолио</a>
-				<a href="#">Контакты</a>
+				<a href="/" class="menu-mobile__logo"><img data-src="images/logo.png" src="images/img-placehold.png" alt="Sh"></a>
+				<a href="/">Главная</a>
+				<a href="#services">Услуги</a>
+				<a href="#stages-of-work">Этапы работы</a>
+				<a href="#reviews">Отзывы</a>
+				<a href="#portfolio">Портфолио</a>
+				<a href="#contacts">Контакты</a>
 			</div>
 			<div class="menu-mobile__call">
 				<a class="phone" href="tel:87007007070">+7 700 700 70 70</a>
@@ -48,14 +48,14 @@
 		<div class="container">
 			<div class="header-top">
 				<div class="header-top__nav">
-					<a href="/" class="logo"><img src="images/logo.png" alt="SHAKiR"></a>
+					<a href="/" class="logo"><img data-src="images/logo.png" src="images/img-placehold.png" alt="SHAKiR"></a>
 					<nav class="menu">
 						<a class="menu__item" href="/">Главная</a>
-						<a class="menu__item" href="#">Услуги</a>
-						<a class="menu__item" href="#">Этапы работы</a>
-						<a class="menu__item" href="#">Отзывы</a>
-						<a class="menu__item" href="#">Портфолио</a>
-						<a class="menu__item" href="#">Контакты</a>
+						<a class="menu__item" href="#services">Услуги</a>
+						<a class="menu__item" href="#stages-of-work">Этапы работы</a>
+						<a class="menu__item" href="#reviews">Отзывы</a>
+						<a class="menu__item" href="#portfolio">Портфолио</a>
+						<a class="menu__item" href="#contacts">Контакты</a>
 					</nav>
 				</div>
 				<div class="header-top__info">
@@ -84,7 +84,7 @@
 								<div class="offer-slider__mobile button button--slider" data-micromodal-open="modal">Консультация</div>
 								<div class="offer-slider__images">
 									<div class="offer-slider__image">
-										<img src="images/slider/1.png" alt="1">
+										<img data-src="images/slider/1.png" src="images/img-placehold.png" alt="1">
 									</div>
 								</div>
 							</div>
@@ -101,7 +101,7 @@
 								<div class="offer-slider__mobile button button--slider" data-micromodal-open="modal">Консультация</div>
 								<div class="offer-slider__images">
 									<div class="offer-slider__image">
-										<img src="images/slider/1.png" alt="1">
+										<img data-src="images/slider/1.png" src="images/img-placehold.png" alt="1">
 									</div>
 								</div>
 							</div>
@@ -118,7 +118,7 @@
 								<div class="offer-slider__mobile button button--slider" data-micromodal-open="modal">Консультация</div>
 								<div class="offer-slider__images">
 									<div class="offer-slider__image">
-										<img src="images/slider/1.png" alt="1">
+										<img data-src="images/slider/1.png" src="images/img-placehold.png" alt="1">
 									</div>
 								</div>
 							</div>
@@ -129,9 +129,7 @@
 				<!-- If we need pagination -->
 				<div class="swiper-pagination"></div>
 
-				<!-- If we need navigation buttons -->
-				<!-- <div class="swiper-button-prev offer-slider__prev"></div> -->
-				<div class="swiper-button-next offer-slider__next">
+				<a href="#advantages" class="offer-slider__next">
 					<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<rect x="34" y="34" width="34" height="34" transform="rotate(180 34 34)" fill="url(#pattern0)"/>
 						<defs>
@@ -141,20 +139,20 @@
 							<image id="image0_101:307" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAADE0lEQVR4nO3dz2oTQQDH8d9sY9I0xT6AV1/AizfBkyWK2Ip7EkX0nNxEvI0nEUS0fQBLVRRSakEw1lMfwUfwDbTS3WajZDzIllrT/Nlufzupv+8xs5mZfFh28wdaQClVYNbaAHCm6H2M28RsOAyfVaOZ7jKcuwkABuZVFHSaWyu2U/TeRmkioOuNpYrZjt4DqP814PApnkoWJwF7qugNDCsMbflnr7cG4Mo/gwZnT7nS+TPnLqx9/bL1i7+70fP6jA5DW45mKmtwuDrk0M9xkFzz+cz2FnoM5DSvsb2EzoCc5i22d9BHQE7zEtsr6ByQ07zD9gY6R+Q0r7CDojcAHAsyAFyq9sobF+/Y6RznzFzh0PXGUiWqVjaGILezjBmY+ZleZd0H7EKhw9CWzY+ohYOf+Pbl4DbjILl+2HhtN1mAwYcBy9R9OLMLgx7lcuHgNneD7sKg62yrZbu1OLkxCNvAzBeNXQh0Xshpk4BNh84bOc13bCr0yDe+udlMb8taLdt1p2shRrhB1htLlXHnP0pU6GA7eooBNz4AbTdXW2wvN5Osa7SXm4mbqy1i8DuVutmOnmRdI0s0aGtt4IC7Aw45MvLeRCNgG+Ae85ca9jX6sPVyQ96bcAi2A0rWPjp50NbaHgze9RnKHXlv4oHY5q21tpf3modFPaPjOGnAYAVAxwA7zpjnx4Wctg/7hQF2AHQA8zLe7TSPa81+FfSlkjOAceM84/Ltx32P/7j6cIzXkF6Tx1s7j0rsBf/Ef6HFruvBl0r/S4ImJWhSgiYlaFKCJiVoUoImJWhSgiYlaFKCJiVoUoImJWhSgiYlaFKCJiVoUoImJWhSgiYlaFKCJiVoUoImJWhSgiYlaFKCJiVoUoImJWhSgiYlaFKCJiVoUoImJWhSgiYlaFKCJiVoUoImJWhSgiYlaFKCJiVoUoImJWhSgiYlaFKCJiVoUoImJWhSgiY1QdDme58Hv9G3kbHJgTa9NwcfcnCvi9hKlgr6I7DjV4un70fVTgkwtwAABquz8fSDgrd1knNmEv+5r1Inq9//Ije7HLE1OwAAAABJRU5ErkJggg=="/>
 						</defs>
 					</svg>
-				</div>
+				</a>
 			</div>
 		</div>
 	</header>
 
 
-	<section class="section section--advantages">
+	<section class="section section--advantages" id="advantages">
 		<div class="container">
 			<div class="section__title">Наши преимущества</div>
 			<div class="row">
 				<div class="col-xl-3 col-lg-6 col-md-6">
 					<div class="advantages">
 						<div class="advantages__images">
-							<img src="images/advantages/1.png" alt="Высоко-квалифицированные специалисты">
+							<img data-src="images/advantages/1.png" src="images/img-placehold.png" alt="Высоко-квалифицированные специалисты">
 							<div class="advantages__decor blue"></div>
 						</div>
 						<div class="advantages__title">Высоко-квалифицированные специалисты</div>
@@ -163,7 +161,7 @@
 				<div class="col-xl-3 col-lg-6 col-md-6">
 					<div class="advantages">
 						<div class="advantages__images">
-							<img src="images/advantages/2.png" alt="Большой опыт на рынке видеонаблюдения">
+							<img data-src="images/advantages/2.png" src="images/img-placehold.png" alt="Большой опыт на рынке видеонаблюдения">
 							<div class="advantages__decor yellow"></div>
 						</div>
 						<div class="advantages__title">Большой опыт на рынке видеонаблюдения</div>
@@ -172,7 +170,7 @@
 				<div class="col-xl-3 col-lg-6 col-md-6">
 					<div class="advantages">
 						<div class="advantages__images">
-							<img src="images/advantages/3.png" alt="Индивидуальный подход каждому клиенту">
+							<img data-src="images/advantages/3.png" src="images/img-placehold.png" alt="Индивидуальный подход каждому клиенту">
 							<div class="advantages__decor blue"></div>
 						</div>
 						<div class="advantages__title">Индивидуальный подход каждому клиенту</div>
@@ -181,7 +179,7 @@
 				<div class="col-xl-3 col-lg-6 col-md-6">
 					<div class="advantages">
 						<div class="advantages__images">
-							<img src="images/advantages/4.png" alt="Быстрая установка камер">
+							<img data-src="images/advantages/4.png" src="images/img-placehold.png" alt="Быстрая установка камер">
 							<div class="advantages__decor yellow"></div>
 						</div>
 						<div class="advantages__title">Быстрая установка камер</div>
@@ -198,7 +196,7 @@
 				<div class="col-xl-6 col-lg-6">
 					<div class="services">
 						<div class="services__images">
-							<img src="images/services/1.jpg" alt="Монтаж и установка видеонаблюдения">
+							<img data-src="images/services/1.jpg" src="images/img-placehold.png" alt="Монтаж и установка видеонаблюдения">
 						</div>
 						<div class="services__info yellow">
 							<div class="services__title">
@@ -213,7 +211,7 @@
 				<div class="col-xl-6 col-lg-6">
 					<div class="services">
 						<div class="services__images">
-							<img src="images/services/2.jpg" alt="Монтаж и наладка пожарной и охранной сигнализации">
+							<img data-src="images/services/2.jpg" src="images/img-placehold.png" alt="Монтаж и наладка пожарной и охранной сигнализации">
 						</div>
 						<div class="services__info blue">
 							<div class="services__title">
@@ -228,7 +226,7 @@
 				<div class="col-xl-6 col-lg-6">
 					<div class="services">
 						<div class="services__images">
-							<img src="images/services/3.jpg" alt="Монтаж и настройка СКУД">
+							<img data-src="images/services/3.jpg" src="images/img-placehold.png" alt="Монтаж и настройка СКУД">
 						</div>
 						<div class="services__info blue">
 							<div class="services__title">
@@ -243,7 +241,7 @@
 				<div class="col-xl-6 col-lg-6">
 					<div class="services">
 						<div class="services__images">
-							<img src="images/services/4.jpg" alt="Монтаж СКС">
+							<img data-src="images/services/4.jpg" src="images/img-placehold.png" alt="Монтаж СКС">
 						</div>
 						<div class="services__info yellow">
 							<div class="services__title">
@@ -261,6 +259,9 @@
 	</section>
 
 	<section class="section section--about">
+		<div class="section--about-decor-right">
+			<img data-src="images/right-decor.png" src="images/img-placehold.png" alt="Cam">
+		</div>
 		<div class="container">
 			<div class="section__title">Немного о нашей компании</div>
 			<div class="row">
@@ -282,14 +283,17 @@
 					<button class="button button--border about__button" data-micromodal-open="modal">Оставить заявку</button>
 				</div>
 				<div class="col-xl-4 col-lg-4">
-					<img class="about__images" src="images/logo-big.jpg" alt="">
+					<img class="about__images" src="images/logo-big.jpg" src="images/img-placehold.png" alt="">
 					<button class="button button--border about__button-mobile" data-micromodal-open="modal">Оставить заявку</button>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<section class="section section--work" id="work">
+	<section class="section section--work" id="stages-of-work">
+		<div class="section--work-decor-left">
+			<img data-src="images/left-decor.png" src="images/img-placehold.png" alt="Cam">
+		</div>
 		<div class="container">
 			<div class="section__title">Этапы работы с нами</div>
 			<div class="row">
@@ -333,7 +337,7 @@
 							<div class="work__stage five">5. Согласование договора</div>
 							<div class="work__stage six">6. Выполнение работы</div>
 							<div class="work__stage seven">7. Сдача работы в срок</div>
-							<img src="images/work.jpg" alt="Этапы работы с нами">
+							<img data-src="images/work.jpg" src="images/img-placehold.png" alt="Этапы работы с нами">
 						</div>
 					</div>
 				</div>
@@ -353,35 +357,35 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section class="section" id="portfolio">
 		<div class="container">
 			<div class="section__title">Наши клиенты</div>
 			<div class="row">
 				<div class="col-xl-3 col-lg-3 col-md-6 col-12">
 					<div class="clients">
-						<img src="images/clients/1.jpg" alt="1">
+						<img data-src="images/clients/1.jpg" src="images/img-placehold.png" alt="1">
 					</div>
 				</div>
 				<div class="col-xl-3 col-lg-3 col-md-6 col-12">
 					<div class="clients">
-						<img src="images/clients/2.jpg" alt="2">
+						<img data-src="images/clients/2.jpg" src="images/img-placehold.png" alt="2">
 					</div>
 				</div>
 				<div class="col-xl-3 col-lg-3 col-md-6 col-12">
 					<div class="clients">
-						<img src="images/clients/3.jpg" alt="3">
+						<img data-src="images/clients/3.jpg" src="images/img-placehold.png" alt="3">
 					</div>
 				</div>
 				<div class="col-xl-3 col-lg-3 col-md-6 col-12">
 					<div class="clients">
-						<img src="images/clients/4.jpg" alt="4">
+						<img data-src="images/clients/4.jpg" src="images/img-placehold.png" alt="4">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<section class="section section--feedback">
+	<section class="section section--feedback" id="reviews">
 		<div class="container">
 			<div class="section__title">Отзывы наших клиентов</div>
 			<div class="row">
@@ -394,7 +398,7 @@
 								<!-- Slides -->
 								<div class="swiper-slide swiper-feedback__slide">
 									<div class="swiper-feedback__image">
-										<img src="images/feedback/1.jpg" alt="1">
+										<img data-src="images/feedback/1.jpg" src="images/img-placehold.png" alt="1">
 										<div class="swiper-feedback__rating">
 											<svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
@@ -433,7 +437,7 @@
 								</div>
 								<div class="swiper-slide swiper-feedback__slide">
 									<div class="swiper-feedback__image">
-										<img src="images/feedback/1.jpg" alt="1">
+										<img data-src="images/feedback/1.jpg" src="images/img-placehold.png" alt="1">
 										<div class="swiper-feedback__rating">
 											<svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
@@ -472,7 +476,7 @@
 								</div>
 								<div class="swiper-slide swiper-feedback__slide">
 									<div class="swiper-feedback__image">
-										<img src="images/feedback/1.jpg" alt="1">
+										<img data-src="images/feedback/1.jpg" src="images/img-placehold.png" alt="1">
 										<div class="swiper-feedback__rating">
 											<svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
@@ -511,7 +515,7 @@
 								</div>
 								<div class="swiper-slide swiper-feedback__slide">
 									<div class="swiper-feedback__image">
-										<img src="images/feedback/1.jpg" alt="1">
+										<img data-src="images/feedback/1.jpg" src="images/img-placehold.png" alt="1">
 										<div class="swiper-feedback__rating">
 											<svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
@@ -550,7 +554,7 @@
 								</div>
 								<div class="swiper-slide swiper-feedback__slide">
 									<div class="swiper-feedback__image">
-										<img src="images/feedback/1.jpg" alt="1">
+										<img data-src="images/feedback/1.jpg" src="images/img-placehold.png" alt="1">
 										<div class="swiper-feedback__rating">
 											<svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path
@@ -675,7 +679,7 @@
 		</div>
 	</section>
 
-	<section class="section section--map">
+	<section class="section section--map" id="contacts">
 		<div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/162/almaty/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Алматы</a><a href="https://yandex.kz/maps/162/almaty/house/Y08YcQ5kTEAAQFppfX53cHpmZA==/?ll=76.794557%2C43.261650&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Маржан, 1 — Яндекс.Карты</a><iframe src="https://yandex.kz/map-widget/v1/-/CCUuA6RhkD" width="100%" height="500" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
 	</section>
 
@@ -704,7 +708,7 @@
 		<div class="container">
 			<div class="header-top">
 				<div class="header-top__nav">
-					<a href="/" class="logo"><img src="images/logo-w.png" alt="SHAKiR"></a>
+					<a href="/" class="logo"><img data-src="images/logo-w.png" src="images/img-placehold.png" alt="SHAKiR"></a>
 					<nav class="menu footer-menu">
 						<a class="menu__item" href="#">Главная</a>
 						<a class="menu__item" href="#">Услуги</a>
