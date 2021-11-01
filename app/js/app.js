@@ -99,6 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		const close = document.querySelector('.menu-mobile__close')
 		const menu = document.querySelector('.menu-mobile-wrapper')
 		const menuTr = document.querySelector('.menu-mobile')
+		const link = document.querySelector('.menu-mobile__nav-item')
+		
+		link.addEventListener('click', () => {
+			menu.classList.remove('is-open')
+			menuTr.classList.remove('is-open')
+		})
 
 		button.addEventListener('click', () => {
 			menu.classList.add('is-open')

@@ -9,6 +9,8 @@
 		height: 930px
 	@include media-breakpoint-down(lg)
 		height: auto
+	@include media-breakpoint-down(md)
+		padding-top: 25px
 	&::after
 		content: ''
 		position: absolute
@@ -34,6 +36,8 @@
 
 .logo
 	margin-right: 67px
+	@include media-breakpoint-down(sm)
+		margin-right: 0
 
 .phone
 	font-weight: 700
