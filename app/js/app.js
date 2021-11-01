@@ -10,7 +10,7 @@ window.$ = $
 
 Swiper.use([Pagination, Autoplay, Controller, Navigation])
 
-MicroModal.init();
+MicroModal.init()
 
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
@@ -30,6 +30,47 @@ document.addEventListener('DOMContentLoaded', () => {
 		// 	document.body.classList.remove('overflow')
 		// }
 	})
+
+	/** LazyLoad Images */
+	const $lazyImages = document.querySelectorAll('img[data-src]')
+	const windowHeight = document.documentElement.clientHeight
+
+	let lazyImagesPositions = []
+	if ($lazyImages.length) {
+		$lazyImages.forEach((lazyImg) => {
+			if (lazyImg.dataset.src) {
+				lazyImagesPositions.push(
+					lazyImg.getBoundingClientRect().top + pageYOffset
+				)
+				lazyScrollCheck()
+			}
+		})
+	}
+
+	window.addEventListener('scroll', lazyScroll)
+
+	function lazyScroll() {
+		if (document.querySelectorAll('img[data-src]').length > 0) {
+			lazyScrollCheck()
+		}
+	}
+
+	function lazyScrollCheck() {
+		let imgIndex = lazyImagesPositions.findIndex(
+			(imgItem) => pageYOffset > imgItem - windowHeight
+		)
+		if (imgIndex >= 0) {
+			if ($lazyImages[imgIndex].dataset.src) {
+				$lazyImages[imgIndex].src = $lazyImages[imgIndex].dataset.src
+				$lazyImages[imgIndex].removeAttribute('data-src')
+				setTimeout(() => {
+					$lazyImages[imgIndex].parentElement.classList.remove('loading')
+				}, 500)
+			}
+			delete lazyImagesPositions[imgIndex]
+		}
+	}
+	/** End LazyLoad Images */
 
 	const swiper = new Swiper('.offer-slider', {
 		direction: 'horizontal',
